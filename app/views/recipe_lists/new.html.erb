@@ -1,0 +1,9 @@
+<h1>Criar Lista de Receitas</h1>
+
+<%= form_with model:@recipe_list do |f| %>
+  <div>
+    <%= f.label :name, 'Nome da Lista' %>
+    <%= f.text_field :name %>
+    <%= f.submit 'Criar Lista' %>
+  </div>
+<% end %>
