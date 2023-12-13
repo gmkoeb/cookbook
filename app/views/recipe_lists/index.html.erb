@@ -1,3 +1,8 @@
-
+<% if @recipe_lists.any? %>
+  <h2>Listas de Receitas</h2>
+  <% @recipe_lists.each do |recipe_list| %>
+    <%= recipe_list.name %>
+  <% end %> 
+<% end %>
 
 <%= link_to 'Criar Lista de Receitas', new_recipe_list_path  %>
