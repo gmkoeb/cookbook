@@ -22,5 +22,10 @@ class RecipeListsController < ApplicationController
 
   def add_recipe
     @recipe_list = RecipeList.find(params[:id])
+    recipe = Recipe.find_by()
+    if recipe.save 
+      flash[:notice] = 'Receita adicionada à lista com sucesso'
+      return redirect_to recipe_lists_path
+    end
   end
 end

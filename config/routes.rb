@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :recipes, only: %i[new create edit update show]
   resources :recipe_lists, only: %i[new create index] do
     get 'add_recipe', on: :member
+    post 'add_recipe', on: :member
   end
 
   namespace :api do
