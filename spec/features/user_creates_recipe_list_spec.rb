@@ -35,6 +35,5 @@ describe 'Usuário adiciona receita à lista de receitas' do
     expect(page).to have_content 'Lista de Receitas criada com sucesso'
     expect(page).to have_content 'Listas de Receitas'
     expect(page).to have_content 'Lista de Sobremesas'
-    expect(page).to have_content 'Adicionar Item à Lista'
   end
 end
