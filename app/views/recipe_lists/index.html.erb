@@ -2,6 +2,7 @@
   <h2>Listas de Receitas</h2>
   <% @recipe_lists.each do |recipe_list| %>
     <%= recipe_list.name %>
+    <%= link_to 'Adicionar Receita', add_recipe_recipe_list_path(recipe_list.id)%>
   <% end %> 
 <% end %>
 

@@ -19,4 +19,8 @@ class RecipeListsController < ApplicationController
       render 'new'
     end
   end
+
+  def add_recipe
+    @recipe_list = RecipeList.find(params[:id])
+  end
 end

@@ -1,0 +1,9 @@
+<h1>Adicionar Receita</h1>
+
+<%= form_with url: add_recipe_recipe_list_path(@recipe_list.id) do |f| %>
+  <div>
+    <%= f.label :recipe_id, "Receita" %>
+    <%= f.collection_select(:recipe_id, Recipe.all, :id, :title) %>
+    <%= f.submit "Adicionar" %>
+  </div>
+<% end %>
